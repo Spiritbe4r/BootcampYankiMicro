@@ -18,7 +18,7 @@ public class RouterConfig {
           .andRoute(POST("/api/yanki-account"), handler::create)
           .andRoute(PUT("/api/yanki-account/amount/{id}"), handler::updateAmount)
           .andRoute(DELETE("/api/yanki-account/{id}"), handler::delete)
-          .andRoute(GET("/api/yanki-account/phone/{id}"), handler::findByPhoneNumber)
+          .andRoute(GET("/api/yanki-account/phone/{phoneNumber}"), handler::findByPhoneNumber)
           .andRoute(POST("/api/yanki-account/{phoneNumber}/addDebitCard/{pan}"), handler::addDebitCard);
   }
 }

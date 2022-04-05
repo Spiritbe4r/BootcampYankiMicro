@@ -47,7 +47,7 @@ public class YankiHandler {
 
   public Mono<ServerResponse> findByPhoneNumber(ServerRequest request) {
 
-    String phoneNumber = request.pathVariable("id");
+    String phoneNumber = request.pathVariable("phoneNumber");
     return service.findByPhoneNumber(phoneNumber).flatMap(c -> ServerResponse
                 .ok()
                 .contentType(MediaType.APPLICATION_JSON)
